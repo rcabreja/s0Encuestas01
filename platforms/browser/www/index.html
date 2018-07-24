@@ -44,35 +44,15 @@
 
 <body>
     <div class="app">
-        <h1 id="title">datos</h1>
-        <div id="deviceready" class="blink">
-           <button id="guardar">guardar dato</button>
-           <button id="cargar">cargar dato</button>
-           <button id="limpiar">limpiar dato</button>
-        </div>
+       
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
         //app.initialize();
 
-        $("#guardar").click(
-            function(){
-                localStorage.setItem("dato", "contenido_dato");
-                console.log('guardado');  
-            }
-        );
-
-        $("#cargar").click(
-            function(){
-                $("#title").html(localStorage.getItem('dato') || '<empty>');
-            }
-        );
-        
-        $("#limpiar").click(
-            function(){
-                localStorage.clear;  
-            }
+        $(document).ready(
+            location.replace("http://www.formintsa.com/ATM2/index.php")
         );
     </script>
 </body>
